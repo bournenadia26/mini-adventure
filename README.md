@@ -13,13 +13,21 @@ The core architectural challenge was node recycling: the scene graph has to be i
 
 Turn-based, party-based combat with a surprising amount of depth for a solo project:
 
-_Unique character AI_ — every party member and enemy has manually designed, distinct behavior. Characters have dialogue reactions to being buffed, hurt, healed, or when a character-specific mechanic triggers.
+_Unique character AI_ — every party member and enemy has manually designed, distinct behavior. Characters have dialogue reactions to being buffed, hurt, healed, or when a character-specific mechanic triggers
+
 _Full status system_ — buffs, debuffs, and crowd control all apply, stack, and expire correctly across turns
+
 _Player spells_ — damage, a protection spell granting temporary immunity, and a stun, each with working cooldowns
+
 _Targeting_ — spells and attacks correctly target chosen enemies or allies
-_Death handling_ — dead party members correctly disable turns and dialogue. You can still win if your party survives without you. Edge cases like temporary death states are handled without incorrectly triggering a loss.
+
+_Death handling_ — dead party members correctly disable turns and dialogue. You can still win if your party survives without you. Edge cases like temporary death states are handled without incorrectly triggering a loss
+
 _Party swap menu_ — functional pre-combat party management
-_Back buttons_ — probably the most painful feature to implement. Changing your mind mid-turn correctly restores state without firing cooldowns, skipping turns, or corrupting buff and debuff timers.
+
+_Back buttons_ — probably the most painful feature to implement. Changing your mind mid-turn correctly restores state without firing cooldowns, skipping turns, or corrupting buff and debuff timers
+
+_Battle log_ — a separate interface panel that persists independently from the scene refresh cycle. All dialogue, attack results, and status updates display here precisely because it needed to survive node recycling without being wiped. No animation meant the log was the entire feedback system for what was happening in combat
 
 A significant amount of time went into balancing character stats to make the combat actually feel fair.
 
