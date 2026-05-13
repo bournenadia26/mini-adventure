@@ -31,6 +31,10 @@ _Battle log_ — a separate interface panel that persists independently from the
 
 A significant amount of time went into balancing character stats to make the combat actually feel fair.
 
+**UI & Presentation**
+
+_Custom text rendering_ — built reusable TextFlow functions to maintain a consistent visual aesthetic across the game, including custom fonts, colors, italics, and bold. Scenes with pure narrative text use a "click anywhere to continue" input model, while choice and combat screens use a button system.
+
 **Source**
 
 All logic lives in MiniAdventure.java. The full runnable JavaFX project isn't included (setup is a pain, trust me) but the architecture, combat system, and story are all readable directly in the source. This was built entirely for fun, and I never intended to finish it, but it was an absolute joy to work on.
