@@ -39,6 +39,4 @@ _Custom text rendering_ — built reusable TextFlow functions to maintain a cons
 
 **Source**
 
----
-
 All logic lives in MiniAdventure.java. The full runnable JavaFX project isn't included (setup is a pain, trust me) but the architecture, combat system, and story are all readable directly in the source. This was built entirely for fun, and I never intended to finish it, but it was an absolute joy to work on.
