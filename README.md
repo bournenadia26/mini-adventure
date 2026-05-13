@@ -3,13 +3,15 @@ A text-based fantasy RPG built in JavaFX. You've been hired by the king to retri
 
 The story is maybe two pages of flavor text total. I'd genuinely encourage you to open MiniAdventure.java and scroll down to line 1087 to read it. World-building was not the priority here, but I hope my love for creative writing and humor comes across in the limited bit that's actually there.
 
-**What I actually built**
+---
+
+## What I actually built
 
 The entire game runs on a linked-list scene graph. Every location, dialogue beat, and combat encounter is a node, with buttons that navigate the links between them and update state on screen and behind the scenes.
 
 The core architectural challenge was node recycling: the scene graph has to be initialized once on first load, but turn-based combat requires cycling through the same nodes repeatedly while correctly reflecting updated state each time. Getting JavaFX to refresh SceneNodes at the right moment (and ensuring what was displayed matched what was actually happening internally) was the central engineering problem of this project.
 
-**Combat System**
+## Combat System
 
 Turn-based, party-based combat with a surprising amount of depth for a solo project:
 
@@ -31,10 +33,12 @@ _Battle log_ — a separate interface panel that persists independently from the
 
 A significant amount of time went into balancing character stats to make the combat actually feel fair.
 
-**UI & Presentation**
+## UI & Presentation
 
 _Custom text rendering_ — built reusable TextFlow functions to maintain a consistent visual aesthetic across the game, including custom fonts, colors, italics, and bold. Scenes with pure narrative text use a "click anywhere to continue" input model, while choice and combat screens use a button system.
 
 **Source**
+
+---
 
 All logic lives in MiniAdventure.java. The full runnable JavaFX project isn't included (setup is a pain, trust me) but the architecture, combat system, and story are all readable directly in the source. This was built entirely for fun, and I never intended to finish it, but it was an absolute joy to work on.
