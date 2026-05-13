@@ -1,7 +1,7 @@
 # mini-adventure
 A text-based fantasy RPG built in JavaFX. You've been hired by the king to retrieve something stolen by a dragon. Classic quest. Except the king is secretly evil and the dragon isn't.
 
-The story is maybe two pages of flavor text total. I'd genuinely encourage you to open MiniAdventure.java and scroll down to read it. World-building was not the priority here, but I hope my love for creative writing and humor comes across in the limited bit that's actually there.
+The story is maybe two pages of flavor text total. I'd genuinely encourage you to open MiniAdventure.java and scroll down to line 1087 to read it. World-building was not the priority here, but I hope my love for creative writing and humor comes across in the limited bit that's actually there.
 
 **What I actually built**
 
